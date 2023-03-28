@@ -1,0 +1,127 @@
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+  }
+  .contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+  }
+  .contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .contactForm .inputBox input,
+  .contactForm .inputBox textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  /*  */
+  outline: none;
+  resize: none;
+  }
+  .contactForm .inputBox span{
+     position: absolute;
+     left: 0;
+     padding: 5px 0;
+     font-size: 16px;
+     margin: 10px 0;
+     /*  */
+     pointer-events: none;
+     transition: 0.5s;
+     color:#666;
+  }
+  .inputBox input:focus~span,
+   .inputBox input:valid~span,
+  .inputBox textarea:focus~span,
+  .inputBox textarea:valid~span{
+    color: rgb(145, 145, 9);
+    font-size: 12px;
+    transform: translateY(-20px);
+  }
+   .btn button{
+    width: 100px;
+    background: #c23535;
+    color: #ffd;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18;
+    border: none;
+  }
+  .contactForm .Error_masage{
+    background-color: #c23535;
+    padding: 0px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    transition:  0.5s ;
+    
+    
+  }
+  <div class="contactForm">
+    <form id="myfrom" onsubmit="return validate();">
+        <h2>Send Message</h2>
+        <div id="error_masage"></div>
+        <div class="inputBox">
+            <input type="text" id="name" class="required">
+            <span>Full Name</span>
+        </div>
+        <div class="inputBox">
+            <input type="text" id="phone" >
+            <span>Phone</span>
+        </div>
+        <div class="inputBox">
+            <input type="text"id="email" >
+            <span>Email</span>
+        </div>
+        <div class="inputBox">
+            <textarea  id="message"></textarea>
+            <span>Type your Massage</span>
+        </div>
+        <div class="btn">
+            <button type="submit">hjgvdf</button>
+            
+        </div>
+    </form>
+</div>
+  
+  
+  
+
+
+function validate(){
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var error_message = document.getElementById("error_message");
+
+  error_message.style.padding = "10px";
+
+  var text;
+  if(name.length < 5){
+    text = "Please Enter valid Name";
+    error_message.innerHTML = text;
+    return false;
+  }
+  
+  if(isNaN(phone) || phone.length != 10){
+    text = "Please Enter valid Phone Number";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(email.indexOf("@") == -1 || email.length < 6){
+    text = "Please Enter valid Email";
+    error_message.innerHTML = text;
+    return false;
+  }
+  
+  alert("Form Submitted Successfully!");
+  return true;
+}
+
+  
