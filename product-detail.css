@@ -1,0 +1,102 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.test-box {
+    background-color: green;
+    min-height: 25px;
+}
+.product-heading {
+    padding: 20px 0;
+}
+.product-heading h3 {
+    font-weight: 700
+}
+.product-heading p {
+    color: grey;
+    font-weight: 500;
+}
+.main-display {
+    min-height: 500px;
+}
+.main-img {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0.5px solid black;
+}
+.col-md-7.col-12 a {
+    background-color: green;
+    color: white;
+    font-size: larger;
+    font-weight: 600;
+    padding: 0 0.5em;
+}
+.main-info {
+    background-color: lightgrey;
+    padding: 1em 2em;
+}
+.main-info h2 {
+    font-weight: 900;
+}
+.main-info span {
+    font-size: medium;
+    font-weight: normal;
+}
+.info-form h5 {
+    color: green;
+}
+.info-form label, p {
+    font-weight: bold;
+    margin: 0;
+}
+.info-form select {
+    padding: 0.5em;
+}
+.info-form textarea {
+    margin: 0;
+    padding: 0.5em;
+}
+.form-end {
+    text-align: center;
+}
+.button-submit {
+    background-color: green;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    width: 80%;
+    border: 1px solid lightgreen;
+    border-radius: 0.5em;
+}
+.form-end p {
+    font-size: smaller;
+    font-weight: normal;
+}
+.form-end label {
+    font-size: smaller;
+    font-weight: normal;
+}
+.overview {
+    background-color: lightgrey;
+    padding: 0 20px 50px 20px;
+}
+.info-heading {
+    text-align: center;
+    padding: 1.5em;
+}
+.overview-stats {
+    text-align: center;
+}
+.overview-stats h5 {
+    color: green;
+    font-weight: bold;
+}
+.overview-stats p {
+    color: black;
+    font-size: large;
+    font-weight: normal;
+}
